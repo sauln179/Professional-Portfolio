@@ -1,26 +1,48 @@
 *{
     box-sizing: border-box;
 }
+
+/* Sets up all parameter in the body tag */
 body{
     font-size: 16px;
     background-color: rgb(245, 237, 226);
     height:100%;
     width:100%;
     margin:0;
+    /* Makes it responsive*/
     display:flex;
+
+    /* Everything will be organized in a column*/
     flex-direction: column;
+
     justify-content: flex-start;
     }
+    /*Set up parameter for header class*/
     .header{
-        padding: 20px;
+        padding: 40px;
         background:rgb(103, 138, 172);
         color:white;
         border-style: double;
         border-width: 0px 0px 5px 0px;
         border-color: black;
+        text-align:center;
+      
     }
+
+
+    /*Makes image placement on top left */
+    .header img{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height:150px;
+        width: 110px;
+    }
+
+    
     .header h1{
         display:inline-block;
+
     }
     .header div{
         padding-top: 15px;
@@ -34,11 +56,14 @@ body{
     .header div ul{
         list-style: none;
     }
+    /*Allows the three nav links to be placed to the right.*/
     .header div ul li{
         display: inline-block;
         margin-left: 25px;
         
     }
+
+    /*When you hover over one of the three, it will have a background*/
     .header div ul li:hover{
         background-color: lawngreen;
     }
@@ -53,6 +78,8 @@ body{
         margin-bottom: 180px;
       
     }
+
+    /*Parameters for the containers used or the projects*/
     .display{
         height:100%;
         width: 100%;
@@ -64,13 +91,12 @@ body{
     }
 
 
-
+    /*Parameters for the biggest project*/
     .projects-A{
         border-style: double;
         border-width: 2px;
         border-radius: 10px;
-        /*padding: 170px;
-        flex: 0 0 400px;*/
+    
         
     }
 
@@ -87,13 +113,13 @@ body{
     }
  
    
-    
+    /*Parameters for the other projects.*/
     .projects{
         border-style: double;
         border-width: 2px;
         border-radius: 10px;
-        padding: 10px;
-        /*flex: 0 0 400px;*/
+        padding: 5px;
+        
     }
     .projects header {
         padding: 20px;
@@ -118,13 +144,12 @@ body{
         background-color: rgb(245, 237, 226);
         text-align: center;
     }
-    @media screen and (max-width: 32px) {
-        .projects-A{
-            width:10%;
+
+    /*If the screen changes sizes, then the projects will adjust.*/
+    @media screen and (max-width: 960px) {
+
+        main {
             flex-direction: column;
-        }
-        .projects {
-          width: 10%;
-          flex-direction: column;
+            width: 80%;
         }
       }
